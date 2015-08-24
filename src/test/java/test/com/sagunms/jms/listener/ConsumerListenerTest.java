@@ -8,7 +8,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.sagunms.ConsumerListener;
+import com.sagunms.jms.listener.ConsumerListener;
 
 public class ConsumerListenerTest {
 	
