@@ -1,7 +1,5 @@
 package test.com.sagunms.jms.listener;
 
-import static org.junit.Assert.assertNull;
-
 import static org.easymock.EasyMock.createMock;
 import static org.easymock.EasyMock.expect;
 import static org.easymock.EasyMock.replay;
@@ -30,6 +28,7 @@ public class ConsumerListenerTest {
 	public void setUp() throws Exception {
 		context = new ClassPathXmlApplicationContext("/spring/application-config.xml");
 		listener = (ConsumerListener) context.getBean("consumerListener");
+		message = createMock(TextMessage.class);
 	}
 
 	@After
@@ -44,14 +43,5 @@ public class ConsumerListenerTest {
 		listener.onMessage(message);
 		verify(message);
 	}
-
-	/*
-	@Test
-	public void testOnMessage() {
-		ConsumerListener listener = new ConsumerListener();
-		listener.onMessage(message);
-		assertNull(message);
-	}
-	*/
 
 }
