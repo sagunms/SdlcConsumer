@@ -159,5 +159,10 @@
 			<artifactId>mongo-java-driver</artifactId>
 			<version>3.0.3</version>
 		</dependency>
+		<dependency>
+			<groupId>org.easymock</groupId>
+			<artifactId>easymock</artifactId>
+			<version>3.3.1</version>
+		</dependency>
 	</dependencies>	
 </project>
